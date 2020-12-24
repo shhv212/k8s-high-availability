@@ -23,7 +23,9 @@ Trong bài viết này, chúng ta sẽ đồng thời sử dụng một số cô
 
 Bây giờ chúng ta sẽ viết một file cấu hình như vậy với tên là create_vm.tf để tạo ra các máy ảo cần dùng trên GCP bao gồm 1 máy làm load balancer, 3 máy làm master node và 3 máy làm worker node. File create_vm.tf sẽ được attach cùng với repo này.  
   
-{ @gist: https://gist.github.com/shhv212/ec2ed99b502deae4c847189ec43d287f }  
+<script src="https://gist.github.com/shhv212/ec2ed99b502deae4c847189ec43d287f.js"> </script>  
+
+
 
 
 
