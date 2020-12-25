@@ -49,7 +49,7 @@ Kết quả nhận được sẽ như sau:
 
 <img src="https://i.imgur.com/Gwu79Lm.png">  
 
-Lệnh `terraform plan` sẽ giúp ta nhìn những tài nguyên nào sẽ được tạo ra trên cơ sở hạ tầng và những tài nguyên cần thiết cho việc đó:  
+Lệnh `terraform plan` sẽ giúp ta nhìn thấy những tài nguyên nào sẽ được tạo ra trên cơ sở hạ tầng và những tài nguyên cần thiết cho việc đó:  
 
 <img src="https://i.imgur.com/d92H091.png">  
 
@@ -122,7 +122,7 @@ Sau khi cài đặt xong thì tiếp tục cấu hình load balancer của nginx
 
 <img src="https://i.imgur.com/OFPGDqZ.png">  
 
-Với địa chỉ 10.148.0.18 chính là Private IP của máy lb01. Ở đây ta thấy thông báo `succeeded` tức là load balancer đã thành công trong việc phân phối các request đến từng máy master node.  
+Với địa chỉ `10.148.0.18` chính là Private IP của máy lb01. Ở đây ta thấy thông báo `succeeded` tức là load balancer đã thành công trong việc phân phối các request đến từng máy master node.  
 
 <a name="installandconfigure"></a>  
 # 3. Tiến hành cài đặt và cấu hình các node hệ thống  
@@ -137,7 +137,7 @@ Trên máy master01, ta thực hiện như sau:
 ```
 sudo kubeadm init --control-plane-endpoint "LOAD_BALANCER_DNS:LOAD_BALANCER_PORT" --upload-certs
 ```
-Với LOAD_BALANCER_DNS là địa chỉ Private IP load balancer 10.148.0.18 và LOAD_BALANCER_PORT là port 6443 của load balancer.  
+Với `LOAD_BALANCER_DNS` là địa chỉ Private IP load balancer `10.148.0.18` và `LOAD_BALANCER_PORT` là `port 6443` của load balancer.  
 
 Sau đó ta hãy để ý những dòng kết quả trả về và lưu lại để join những master node khác và những worker node vào cụm cluster.  
 
@@ -156,7 +156,7 @@ kubeadm join 10.148.0.18:6443 --token eejgjq.rfgykyao7z0ryeig \
 ```
 Còn đoạn tương tự như thế này là dùng để join các worker node vào cluster.  
 
-Sau đó ta nên cấu hình `kubectl` ngay trên máy master01 để sử dụng đẩy các ứng dụng vào cụm Kubernetes cluster cũng như quản trị được các cụm này.  
+Sau đó ta nên cấu hình **kubectl** ngay trên máy master01 để sử dụng đẩy các ứng dụng vào cụm Kubernetes cluster cũng như quản trị được cụm này.  
 
 ```
 mkdir -p $HOME/.kube
@@ -187,7 +187,7 @@ Trên máy master01 ta kiểm tra:
 
 <img src="https://i.imgur.com/gauZsFA.png">  
 
-Tất cả các máy đều có trạng thái READY tức là đã hoàn thành bước này.  
+Tất cả các máy đều có trạng thái `READY` tức là đã hoàn thành bước này.  
 
 Bây giờ ta sẽ demo deploy thử một ứng dụng và chạy các dịch vụ liên quan trên máy master01 để xem ứng dụng này có được đẩy qua các máy master còn lại thông qua cụm cluter hay không.
 
@@ -195,12 +195,12 @@ Bây giờ ta sẽ demo deploy thử một ứng dụng và chạy các dịch v
 
 <img src="https://i.imgur.com/E7hlASX.png">  
 
-Trên máy master01 ta dùng lệnh `curl` để hiển thị nội dung localhost theo địa chỉ máy master02 với port 30278 của dịch vụ nginx vừa tạo ra thì ta thấy kết quả là ứng dụng và dịch vụ cũng được chạy như trên máy master01.  
+Trên máy master01 ta dùng lệnh `curl` để hiển thị nội dung localhost theo địa chỉ máy master02 với port `30278` của dịch vụ `nginx` vừa tạo ra thì ta thấy kết quả là ứng dụng và dịch vụ cũng được chạy như trên máy master01.  
 
 <img src="https://i.imgur.com/4vOjVYA.png">  
 
 <img src="https://i.imgur.com/tG3LBk3.png">  
 
-Như vậy chúng ta đã xây dựng được một mô hình K8s có High Availability trên nền tảng dịch vụ Cloud của Google, bây giờ có thể được sử dụng để phát triển những ứng dụng và sản phẩm thật hệ thống Kubernetes này.
+Như vậy chúng ta đã xây dựng được một mô hình **K8s** có **High Availability** trên nền tảng dịch vụ **Cloud** của **Google**, bây giờ có thể được sử dụng để phát triển những ứng dụng và sản phẩm thật với hệ thống **Kubernetes** này.
 Cảm ơn mọi người đã theo dõi!!
 
