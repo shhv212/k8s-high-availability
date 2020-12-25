@@ -10,7 +10,7 @@ Trong bài viết này, chúng ta sẽ đồng thời sử dụng một số cô
 
 [1. Tạo các máy ảo trong mô hình trên Google Cloud Platform bằng Terraform ](#createvm)  
 [2. Cài đặt K8s cùng với HA ](#k8s)   
-[3. Tiến hành cài đặt và cấu hình các node hệ thống](#installandconfigure)
+[3. Tiến hành cài đặt và cấu hình các node hệ thống](#installandconfigure)  
   [a. Master Node](#masternode)  
   [b. Worker Node](#workernode)  
 
