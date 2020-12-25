@@ -11,13 +11,13 @@ Trong bài viết này, chúng ta sẽ đồng thời sử dụng một số cô
 [1. Tạo các máy ảo trong mô hình trên Google Cloud Platform bằng Terraform ](#createvm)  
 [2. Cài đặt K8s cùng với HA ](#k8s)   
 [3. Tiến hành cài đặt và cấu hình các node hệ thống](#installandconfigure)  
-  [a. Master Node](#masternode)  
-  [b. Worker Node](#workernode)  
+ - [a. Master Node](#masternode)  
+ - [b. Worker Node](#workernode)  
 
 ===============================================================  
 
 <a name="createvm"></a>  
-# 1. Tạo các máy ảo trong mô hình trên Google Cloud Platform bằng Terraform  
+# 1. Tạo các máy ảo trong mô hình trên Google Cloud Platform thông qua công cụ Terraform  
 
 **Terraform** là một công cụ mã nguồn mở dùng để tự động hóa quá hình tạo và cấu hình các chương trình hay ứng dụng bằng việc sử dụng các file script được viết sẵn.  
 
