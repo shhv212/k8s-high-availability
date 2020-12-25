@@ -33,6 +33,15 @@ Vì trong file create_vm.tf có gọi đến file JSON nên ta cần đổi tên
 
 <img src="https://i.imgur.com/HW19USt.png">  
 
+C
+
+<a name="k8s"></a>  
+# 2. Cài đặt K8s cùng với HA  
+
+Bây giờ trước tiên ta thực hiện cài đặt các gói packets liên quan tới `docker` và `kubernetes` trên tất cả các máy node trước.  
+Để làm điều này, từ `Cloud Shell` ta ssh vào trong từng máy và cài đặt tương tự nhau:  
+
+<img src="https://prnt.sc/w9hg48">  
 
 
 
