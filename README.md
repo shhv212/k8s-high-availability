@@ -17,7 +17,7 @@ Trong bài viết này, chúng ta sẽ đồng thời sử dụng một số cô
 ===============================================================  
 
 <a name="createvm"></a>  
-# 1. Tạo các máy ảo trong mô hình trên Google Cloud Platform thông qua công cụ Terraform  
+## 1. Tạo các máy ảo trong mô hình trên Google Cloud Platform thông qua công cụ Terraform  
 
 **Terraform** là một công cụ mã nguồn mở dùng để tự động hóa quá hình tạo và cấu hình các chương trình hay ứng dụng bằng việc sử dụng các file script được viết sẵn.  
 
@@ -80,7 +80,7 @@ Kế đến, ta mở `Google Cloud Dashboard` lên để kiểm tra các instanc
 Đối với project `K8s-HA-using-kubeadm-on-GCP` có 7 máy ảo theo như kế hoạch ban đầu.
 
 <a name="k8s"></a>  
-# 2. Cài đặt K8s cùng với HA  
+## 2. Cài đặt K8s cùng với HA  
 
 Bây giờ trước tiên ta thực hiện cài đặt các gói packets liên quan tới `docker` và `kubernetes` trên tất cả các máy node trước.  
 Để làm điều này, từ `Cloud Shell` ta ssh vào trong từng máy và cài đặt tương tự nhau:  
@@ -125,10 +125,10 @@ Sau khi cài đặt xong thì tiếp tục cấu hình load balancer của nginx
 Với địa chỉ `10.148.0.18` chính là Private IP của máy lb01. Ở đây ta thấy thông báo `succeeded` tức là load balancer đã thành công trong việc phân phối các request đến từng máy master node.  
 
 <a name="installandconfigure"></a>  
-# 3. Tiến hành cài đặt và cấu hình các node hệ thống  
+## 3. Tiến hành cài đặt và cấu hình các node hệ thống  
 
 <a name="masternode"></a>  
-# a. Master Node  
+### a. Master Node  
 
 Đầu tiên, ta phải chọn máy master node 01 để làm máy chính trong cụm các máy master.  
 
@@ -179,7 +179,7 @@ Sau đó ta quay trở lại máy master01 và kiểm tra xem các máy đã ch�
 Thành công !!!
 
 <a name="workernode"></a>  
-# b. Worker Node  
+### b. Worker Node  
 
 Bây giờ cách làm khá đơn giản là sử dụng dòng lệnh đã lưu lại ở bước trên để join các máy worker01, worker02 và worker03 vào cả cụm cluster là xong thôi.
 
