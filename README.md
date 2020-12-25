@@ -204,3 +204,12 @@ Trên máy master01 ta dùng lệnh `curl` để hiển thị nội dung localho
 Như vậy chúng ta đã xây dựng được một mô hình **K8s** có **High Availability** trên nền tảng dịch vụ **Cloud** của **Google**, bây giờ có thể được sử dụng để phát triển những ứng dụng và sản phẩm thật với hệ thống **Kubernetes** này.  
 Cảm ơn mọi người đã theo dõi!!
 
+## Tài liệu tham khảo  
+
+https://medium.com/@prasenjitsarkar_79320/creating-highly-available-kubernetes-cluster-using-kubeadm-on-google-cloud-4008a39a14c8  
+
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/  
+
+https://thenewstack.io/how-to-deploy-a-kubernetes-cluster-to-the-google-cloud-platform/  
+
+
