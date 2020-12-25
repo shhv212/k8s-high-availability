@@ -21,15 +21,15 @@ Trong bài viết này, chúng ta sẽ đồng thời sử dụng một số cô
 
 **Terraform** là một công cụ mã nguồn mở dùng để tự động hóa quá hình tạo và cấu hình các chương trình hay ứng dụng bằng việc sử dụng các file script được viết sẵn.  
 
-Bây giờ chúng ta sẽ viết một file cấu hình như vậy với tên là create_vm.tf để tạo ra các máy ảo cần dùng trên GCP bao gồm 1 máy làm load balancer, 3 máy làm master node và 3 máy làm worker node. File create_vm.tf sẽ được attach cùng với repo này.  
+Bây giờ chúng ta sẽ viết một file cấu hình như vậy với tên là `create_vm.tf` để tạo ra các máy ảo cần dùng trên GCP bao gồm `1 máy làm load balancer, 3 máy làm master node và 3 máy làm worker node`. File `create_vm.tf` sẽ được attach cùng với repo này.  
   
-https://gist.github.com/shhv212/ec2ed99b502deae4c847189ec43d287f  
+[Source Code] https://gist.github.com/shhv212/ec2ed99b502deae4c847189ec43d287f  
 
 Sau khi thực hiện tạo một project riêng trên GCP để làm môi trường thực hành thì ta sẽ tạo thêm 1 Service Account nữa có tên là `terraform` và 1 private key JSON tương ứng với lưu lại thành file để sử dụng tạo các máy ảo.  
 
 <img src="https://i.imgur.com/QCtL8UK.png">  
 
-Vì trong file create_vm.tf có gọi đến file JSON nên ta cần đổi tên cho phù hợp. Kết quả thu được tại thư mục sẽ có 2 file như sau:  
+Vì trong file `create_vm.tf` có gọi đến file JSON nên ta cần đổi tên cho phù hợp. Kết quả thu được tại thư mục sẽ có 2 file như sau:  
 
 <img src="https://i.imgur.com/HW19USt.png">  
 
@@ -63,7 +63,7 @@ Sau khi xác nhận được các tài nguyên sẽ được tạo ra như thế
 
 <img src="https://i.imgur.com/TK2X485.png">  
 
-Lệnh này cũng ta review lại cấu hình 1 lần nữa trước khi ấn `yes` :  
+Lệnh này cũng giúp ta review lại cấu hình 1 lần nữa trước khi ấn `yes` :  
 
 <img src="https://i.imgur.com/tCRrk9q.png">  
 
