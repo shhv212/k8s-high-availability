@@ -27,7 +27,7 @@ https://gist.github.com/shhv212/ec2ed99b502deae4c847189ec43d287f
 
 Sau khi thực hiện tạo một project riêng trên GCP để làm môi trường thực hành thì ta sẽ tạo thêm 1 Service Account nữa có tên là `terraform` và 1 private key JSON tương ứng với lưu lại thành file để sử dụng tạo các máy ảo.  
 
-<img src="https://i.imgur.com/eO625nH.png">  
+<img src="https://i.imgur.com/QCtL8UK.png">  
 
 Vì trong file create_vm.tf có gọi đến file JSON nên ta cần đổi tên cho phù hợp. Kết quả thu được tại thư mục sẽ có 2 file như sau:  
 
