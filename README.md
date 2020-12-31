@@ -212,5 +212,3 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-avail
 
 https://thenewstack.io/how-to-deploy-a-kubernetes-cluster-to-the-google-cloud-platform/  
 
-
-ádasdasdsa
